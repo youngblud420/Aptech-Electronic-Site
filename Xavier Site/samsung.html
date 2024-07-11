@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Lectronic Mall</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .video-container video {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            border: none; /* Remove border to keep consistent styling */
+        }
+
+        .card-img-top {
+            object-fit: contain;
+            height: 250px;
+        }
+
+        .card-body {
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-text {
+            font-size: 0.875rem;
+            color: #6c757d;
+        }
+
+        .btn-primary {
+            width: 100%;
+        }
+
+        .centered {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #000;
+            color: #fff;
+            text-decoration: none;
+            border: 2px solid #000;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #333;
+            border-color: #333;
+        }
+
+        .card-hover {
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .card-hover:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+        }
+
+        /* Remove underline and blue color from links */
+        .card-link {
+            text-decoration: none;
+            color: inherit; /* Inherit text color from parent */
+        }
+
+        .card-link:hover {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="Header" style="background-color: rgb(237, 237, 237);">
+            <h1 style="text-align: center;">E-Lectronic Mall</h1>
+            <h4 style="text-align: center;">"Tech Essentials, Delivered"</h4>
+        </div>
+        <h1 style="text-align: center;">-40% off on all products until July 30th</h1>
+        <hr>
+    </header>
+
+    <main>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search" id="search-form">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search-input">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <h3 style="text-align: center;">-Samsung Z Fold6: Unfolding tomorrow's technology, today.</h3>
+
+        <div class="video-container">
+            <video autoplay loop muted>
+                <source src="videoplayback.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <br>
+        <div style="text-align: center;">
+            <button class="btn btn-learn-more">Learn More</button>
+        </div>
+        <br>
+        <hr>
+        <h3 style="text-align: center;">Featured Samsung Products</h3>
+        <br>
+
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                <div class="col">
+                    <a href="#" class="card-link">
+                        <div class="card h-100 card-hover">
+                            <img src="https://images.samsung.com/is/image/samsung/p6pim/pk/feature/165272014/pk-feature-metal-meets-glass--awesome-541456554?$FB_TYPE_A_JPG$" class="card-img-top" alt="Card Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Galaxy A55 5G</h5>
+                                <p class="card-text">50MP of vibrant colors and details</p>
+                                <hr>
+                                <p class="card-text">Rs. 130,999.00</p>
+                                <button class="btn btn-primary">Buy now</button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col">
+                    <a href="https://www.samsungmobilepress.com/media-assets/galaxy-z-fold6/" class="card-link">
+                        <div class="card h-100 card-hover">
+                            <img src="https://images.samsung.com/is/image/samsung/assets/pk/smartphones/galaxy-s24-ultra/buy/S24Ultra-Color-Titanium_Grey_PC.jpg?imbypass=true" class="card-img-top" alt="Card Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Galaxy Z Fold6</h5>
+                                <p class="card-text">Unfold your world's potential.</p>
+                                <hr>
+                                <p class="card-text">Rs. 474,999.00</p>
+                                <button class="btn btn-primary">Buy now</button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col">
+                    <a href="#" class="card-link">
+                        <div class="card h-100 card-hover">
+                            <img src="https://images.samsung.com/is/image/samsung/assets/pk/smartphones/galaxy-s24-ultra/buy/01_S24Ultra-Group-KV_PC.jpg?imbypass=true" class="card-img-top" alt="Card Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Galaxy S24 Ultra</h5>
+                                <p class="card-text">All-day battery to play on and on</p>
+                                <hr>
+                                <p class="card-text">Rs. 434,999.00</p>
+                                <button class="btn btn-primary">Buy now</button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col">
+                    <a href="https://www.samsung.com/pk/smartphones/galaxy-a/galaxy-a35-5g-awesome-navy-256gb-sm-a356ezkvpkd/" class="card-link">
+                        <div class="card h-100 card-hover">
+                            <img src="https://images.samsung.com/is/image/samsung/p6pim/pk/sm-a356ezkvpkd/gallery/pk-galaxy-a35-5g-sm-a356-sm-a356ezkvpkd-thumb-541450265?$216_216_PNG$" class="card-img-top" alt="Card Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Samsung A35 5G</h5>
+                                <p class="card-text">12GB | 258GB</p>
+                                <hr>
+                                <p class="card-text">₨. 104,999.00</p>
+                                <button class="btn btn-primary">Buy now</button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col">
+                    <a href="https://www.samsung.com/pk/tablets/galaxy-tab-a/galaxy-tab-a8-lte-dark-gray-64gb-sm-x205nzaemeb/#specs" class="card-link">
+                        <div class="card h-100 card-hover">
+                            <img src="https://images.samsung.com/is/image/samsung/assets/pk/smartphones/socialimage/tablet/SEPAK_Tab_A8_720x370.jpg?$ORIGIN_JPG$" class="card-img-top" alt="Card Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Galaxy Tab A8 LTE</h5>
+                                <p class="card-text">Portable power, limitless possibilities.</p>
+                                <hr>
+                                <p class="card-text">$229.00</p>
+                                <button class="btn btn-primary">Buy Now</button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col">
+                    <a href="https://www.samsung.com/pk/tvs/all-tvs/?over-70" class="card-link">
+                        <div class="card h-100 card-hover">
+                            <img src="https://images.samsung.com/is/image/samsung/p6pim/pk/qa85q70cauxmm/gallery/pk-qled-q70c-qa85q70cauxmm-537262284?$592_472_PNG$" class="card-img-top" alt="Card Image">
+                            <div class="card-body">
+                                <h5 class="card-title">85" QLED 4K Q70C</h5>
+                                <p class="card-text">"Immersive brilliance, cinematic experience."</p>
+                                <hr>
+                                <p class="card-text">₨. 959,999.00</p>
+                                <button class="btn btn-primary">Buy Now</button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col">
+                    <a href="https://www.samsung.com/pk/projector-accessories/the-freestyle-skin-green-vg-sclb00nr-zn/" class="card-link">
+                        <div class="card h-100 card-hover">
+                            <img src="https://images.samsung.com/is/image/samsung/p6pim/pk/vg-sclb00nr-zn/gallery/pk-the-freestyle-skin-vg-sclb00-vg-sclb00nr-zn-531062450?$730_584_PNG$" class="card-img-top" alt="Card Image">
+                            <div class="card-body">
+                                <h5 class="card-title">The Freestyle Skin-Green</h5>
+                                <p class="card-text">"Bold style, boundless freedom."</p>
+                                <hr>
+                                <p class="card-text">$150.00</p>
+                                <button class="btn btn-primary">Buy Now</button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col">
+                    <a href="https://www.samsung.com/pk/washers-and-dryers/washing-machines/wa5000c-top-load-ecobubble-digital-inverter-technology-super-speed-15kg-dark-gray-wa15ck5745bdrt/" class="card-link">
+                        <div class="card h-100 card-hover">
+                            <img src="https://images.samsung.com/is/image/samsung/p6pim/pk/wa15ck5745bdrt/gallery/pk-wa5000c-wa15ck5745bdrt-thumb-539148109?$252_252_PNG$" class="card-img-top" alt="Card Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Ecobubble™, 15 Kg</h5>
+                                <p class="card-text">"Laundry innovation."</p>
+                                <hr>
+                                <p class="card-text">Rs. 214,999.00</p>
+                                <button class="btn btn-primary">Buy Now</button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="centered">
+            <button class="button">Support</button>
+            <button class="button">Contact</button>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-+0vC/pFzpe8+abG9D60mOPEjZ2JC4KKOZsJLXPDpfdJkx2gRAFnK6a/IodpJK28k" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+        <br><br>
+        
+        <div style="text-align: center;">
+            <button class="btn btn-learn-more">Learn More</button>
+        </div>
+
+        <hr><br>
+
+        <h3 style="text-align: center;">Huawei Products</h3>
+        <br><br>
+
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                
+                <div class="col">
+                    <a href="https://consumer.huawei.com/en/phones/?ic_medium=hwdc&ic_source=corp_header_consumer" class="card-link">
+                        <div class="card h-100 card-hover">
+                            <img src="https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/plp/phones-20230509/mate-series/mate50-pro.png" class="card-img-top" alt="Card Image">
+                            <div class="card-body">
+                                <h5 class="card-title">HUAWEI Mate 50 Pro</h5>
+                                <p class="card-text">Personal, Productive, and Private
+                                </p>
+                                <hr>
+                                <p class="card-text">$699.00</p>
+                                <button class="btn btn-primary">Buy Now</button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col">
+                    <a href="https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/plp/phones-20230509/mate-series/mate50.png" class="card-link">
+                        <div class="card h-100 card-hover">
+                            <img src="https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/plp/phones-20230509/mate-series/mate50.png" class="card-img-top" alt="Card Image">
+                            <div class="card-body">
+                                <h5 class="card-title">HUAWEI Mate 50
+
+                                </h5>
+                                <p class="card-text">Your Glamorous Mate
+                                </p>
+                                <hr>
+                                <p class="card-text">$650.00</p>
+                                <button class="btn btn-primary">Buy Now</button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+    
+                
+                <div class="col">
+                    <a href="#" class="card-link">
+                        <div class="card h-100 card-hover">
+                            <img src="https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/plp-x/laptops/matebook-series/matebook-14s-2023.png" class="card-img-top" alt="Card Image">
+                            <div class="card-body">
+                                <h5 class="card-title">HUAWEI MateBook 14s</h5>
+                                <p class="card-text">2.5K HUAWEI FullView Display1 |
+                                    13th Gen Intel® Core™ H-Series
+                                </p>
+                                <hr>
+                                <p class="card-text">$899.00</p>
+                                <button class="btn btn-primary">Buy Now</button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+    
+                
+                <div class="col">
+                    <a href="#" class="card-link">
+                        <div class="card h-100 card-hover">
+                            <img src="https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/plp/routers-20230824/mobile-wifi-series/4g-mobile-wifi-3-e5783.png" class="card-img-top" alt="Card Image">
+                            <div class="card-body">
+                                <h5 class="card-title">HUAWEI 4G Mobile WiFi 3 </h5>
+                                <p class="card-text">LTE 300 Mbps1 | Wi-Fi Dual Band</p>
+                                <hr>
+                                <p class="card-text">$199.00</p>
+                                <button class="btn btn-primary">Buy Now</button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col">
+                    <a href="#" class="card-link">
+                        <div class="card h-100 card-hover">
+                            <img src="https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/plp/routers-20230824/compare/ax3-pro.png" class="card-img-top" alt="Card Image">
+                            <div class="card-body">
+                                <h5 class="card-title">HUAWEI WiFi AX3 Pro
+                                </h5>
+                                <p class="card-text">Wi-Fi 6 Plus 3000 Mbps1 | Visualized Wi-Fi Diagnosis</p>
+                                <hr>
+                                <p class="card-text">$250.00</p>
+                                <button class="btn btn-primary">Buy Now</button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="col">
+                    <a href="#" class="card-link">
+                        <div class="card h-100 card-hover">
+                            <img src="https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/plp/audio-new/freebuds-pro-2.jpg" class="card-img-top" alt="Card Image">
+                            <div class="card-body">
+                                <h5 class="card-title">HUAWEI FreeBuds Pro 3
+                                </h5>
+                                <p class="card-text">Dual-Speaker Premium Sound | Pure Voice 2.01</p>
+                                <hr>
+                                <p class="card-text">$130.00</p>
+                                <button class="btn btn-primary">Buy Now</button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="col">
+                    <a href="https://consumer.huawei.com/en/wearables/watch-fit3/" class="card-link">
+                        <div class="card h-100 card-hover">
+                            <img src="https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/plp-x/wearable/kv/watch-fit3-kv.jpg" class="card-img-top" alt="Card Image">
+                            <div class="card-body">
+                                <h5 class="card-title">HUAWEI WATCH FIT 3
+                                </h5>
+                                <p class="card-text">Ultra-Slim Design | 1.82" AMOLED Display/p>
+                                <hr>
+                                <p class="card-text">$499.00</p>
+                                <button class="btn btn-primary">Buy Now</button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="col">
+                    <a href="https://consumer.huawei.com/en/accessories/pura70-cloud-vegan-leather-case/" class="card-link">
+                        <div class="card h-100 card-hover">
+                            <img src="https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/admin-image/accessories/pura70-cloud-vegan-leather-case/list-green.png" class="card-img-top" alt="Card Image">
+                            <div class="card-body">
+                                <h5 class="card-title">HUAWEI Pura 70 Cloud Vegan Leather Case
+                                </h5>
+                                <p class="card-text">Stands Out from the Crowd</p>
+                                <hr>
+                                <p class="card-text">$30.00</p>
+                                <button class="btn btn-primary">Buy Now</button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+             
+
+                
+
+                
+
+    </main>
+
+    <footer>
+        <div style="text-align: center;">
+            <button class="btn btn-learn-more">Learn More</button>
+        </div>
+
+        <hr><br>
+    </footer>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-OrsWRfXO9bcKkQV4W9ssPge4sV5w1gIIMwOtzkDp2vFzCyZ0gd2hO3FzDR4rlSgD" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-1FgHYQF5a+w8PrJv1p8zYPnLxB/RQwU1b9Eet/6ZpDwFm9sxcNmu+smPqO2rmiXG" crossorigin="anonymous"></script>
+</body>
+</html>
